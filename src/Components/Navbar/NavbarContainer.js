@@ -19,7 +19,7 @@ const NavbarContainer = () => {
                     <Nav className="ms-auto">
                         <Nav.Link href="#home">Home</Nav.Link>
                         <Nav.Link href="#link">About</Nav.Link>
-                        <Nav.Link href="#link">Contact</Nav.Link>
+                        <Nav.Link href="#contact">Contact</Nav.Link>
                     </Nav>
                     <Nav className="ms-auto">
                         <Button variant="outline-light">Login</Button>
