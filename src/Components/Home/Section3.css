@@ -1,0 +1,30 @@
+.main-container {
+    background: red;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .content-container {
+    text-align: center;
+
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+  }
+  
+  .card-item {
+    width: 18rem; /* Adjust the width as needed */
+    margin-left: 20px;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem;
+  }
