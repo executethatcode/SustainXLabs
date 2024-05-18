@@ -23,12 +23,10 @@ const AddPickup = () => {
 
           <Form.Group controlId="formGarbageType">
             <Form.Label>Garbage Type</Form.Label>
-            <Form.Control as="select">
-              <option value="">Select type</option>
-              <option value="Organic">Organic</option>
-              <option value="Recyclable">Recyclable</option>
-              <option value="Hazardous">Hazardous</option>
-              <option value="Other">Other</option>
+            <Form.Control as="select" defaultValue="General">
+              <option value="Dry">Dry waste</option>
+              <option value="Wet">Wet waste</option>
+              <option value="General">General waste</option>
             </Form.Control>
           </Form.Group>
 
