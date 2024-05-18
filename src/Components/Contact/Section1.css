@@ -8,15 +8,22 @@
   .left-div, .right-div {
     padding: 20px;
   }
+
+  .right-div{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
   
-  .image-container {
+  .map-container {
+    margin-top: 80px;
     height: 200px;
-    background-color: #e9ecef; 
+    background-color: transparent; 
     display: flex;
     align-items: center;
     justify-content: center;
     color: #6c757d;
-    border: 1px solid #dee2e6;
+    border: 0cap solid #dee2e6;
   }
   
   h1 {
