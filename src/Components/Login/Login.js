@@ -1,21 +1,7 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import './Login.css'
 const Login = () => {
-//   const [email, setEmail] = useState('');
-//   const [password, setPassword] = useState('');
-//   const history = useHistory();
-
-//   const handleSignIn = (e) => {
-//     e.preventDefault();
-//     // Add your authentication logic here
-//     console.log('Sign In', { email, password });
-//   };
-
-//   const navigateToSignUp = () => {
-//     history.push('/signup');
-//   };
 
   return (
   <Container className="mt-5 mb-5">
@@ -46,9 +32,9 @@ const Login = () => {
             Sign In
           </Button>
         </Form>
-        <Button variant="outline-success" className="w-100 mt-2" >
+        {/* <Button variant="outline-success" className="w-100 mt-2" >
           Sign Up
-        </Button>
+        </Button> */}
       </div>
     </Col>
   </Row>

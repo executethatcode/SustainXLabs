@@ -1,8 +1,8 @@
-.hero-banner {
+.hero-banner-track {
     position: relative;
     background: url('https://via.placeholder.com/1200x600') no-repeat center center;
     background-size: cover;
-    height: 600px;
+    height: 150px;
     color: #fff;
     display: flex;
     align-items: center;
@@ -30,7 +30,7 @@
     margin-bottom: 30px;
 }
 
-.hero-button{
+.hero-button {
     font-size: 1.2rem;
     margin-right: 10px;
     margin-bottom: 10px;

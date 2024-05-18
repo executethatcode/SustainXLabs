@@ -13,8 +13,8 @@ const HeroBanner = () => {
                             <p className="hero-subtitle">
                                 We help make your neighborhood more sustainable With an industry-leading 80% recycling rate, we can help you transform your personal’ waste management.
                             </p>
-                            <Button variant="primary" className="hero-button">Sign up</Button>
-                            <Button variant="outline-light" className="hero-button">For Industries</Button>
+                            <Button variant="primary" className="hero-button">Add Pickup</Button>
+                            <Button variant="outline-light" className="hero-button">Contact us</Button>
                         </Col>
                     </Row>
                 </Container>

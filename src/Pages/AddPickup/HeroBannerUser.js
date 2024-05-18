@@ -1,14 +1,14 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
-import "../../User/User_Components/HeroBannerUser.css"
+import "../../Pages/AddPickup/HeroBannerUser.css"
 const HeroBannerUser = () => {
   return (
-    <div className="hero-banner">
+    <div className="hero-banner-track">
             <div className="overlay">
                 <Container>
                     <Row className="align-items-center">
                         <Col md={6}>
-                            <h1 className="hero-title">Hello Username</h1>
+                            <h1 className="hero-title">Pickup</h1>
                         </Col>
                     </Row>
                 </Container>

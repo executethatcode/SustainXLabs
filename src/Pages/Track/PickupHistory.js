@@ -1,5 +1,5 @@
 import React from 'react'
-import { Table, Button, Container, Col, Row } from 'react-bootstrap';
+import { Table, Button, Container, Col, Row, Form } from 'react-bootstrap';
 
 const PickupHistory = () => {
 
@@ -11,17 +11,31 @@ const PickupHistory = () => {
       
   return (
     <>
-    <Container>
-    <h2 className="my-4">Garbage Pickup Requests</h2>
+    
+    <Container className="d-flex flex-column align-items-center mt-5">
+      <Form>
+        <Form.Group controlId="formBasicInput">
+          <Form.Control type="text" placeholder="Enter Request ID" />
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+    </Container>
+    
+    <Container className='mb-5 mt-5'>
+      <h2 className="my-4">Garbage Pickup Status</h2>
     <Table striped bordered hover>
       <thead>
         <tr>
           <th>RequestID</th>
+          <th>Name</th>
+          <th>Email</th>
           <th>Garbage Type</th>
+          <th>Garbage Description</th>
           <th>Pickup Address</th>
           <th>Pickup Date</th>
           <th>Status</th>
-          <th>Action</th>
         </tr>
       </thead>
       <tbody>
@@ -41,13 +55,6 @@ const PickupHistory = () => {
       </tbody>
     </Table>
   </Container>
-  <Container fluid className="d-flex mb-5">
-  <Row className="m-auto">
-    <Col className="text-center">
-      <Button variant="primary" className="mx-2">Back</Button>
-    </Col>
-  </Row>
-</Container>
 </>
   )
 }
