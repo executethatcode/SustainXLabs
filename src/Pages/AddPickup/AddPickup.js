@@ -44,12 +44,12 @@ const AddPickup = () => {
 
           <Form.Group controlId="formPincode">
             <Form.Label>Pincode</Form.Label>
-            <Form.Control type="date" />
+            <Form.Control type="text" />
           </Form.Group>
 
           <Form.Group controlId="formState">
             <Form.Label>State</Form.Label>
-            <Form.Control type="date" />
+            <Form.Control type="text" />
           </Form.Group>
 
           <Form.Group controlId="formPickupDate">
