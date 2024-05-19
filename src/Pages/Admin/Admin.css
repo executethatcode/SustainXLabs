@@ -1,8 +1,0 @@
-.sidebar {
-    height: 100vh;
-    position: fixed;
-  }
-  
-  .main-content {
-    margin-left: 200px; /* Adjust based on sidebar width */
-  }

@@ -6,7 +6,8 @@ import Homepage from "./Pages/Homepage/Homepage.js"
 import Aboutpage from "./Pages/About/Aboutpage.js"
 import ContactPage from "./Pages/Contact/ContactPage.js"
 import AddPickupPage from "./Pages/AddPickup/AddPickupPage.js"
-import Loginpage from "./Pages/Login/Loginpage.js";
+import Login from "./Components/Login/Login.js";
+import Admin from "./Pages/Admin/Admin.js"
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           <Route path="/addpickup" element={<AddPickupPage/>}></Route>
           <Route path="/track" element={<Trackpage/>}></Route>
           <Route path="/contact" element={<ContactPage/>}></Route>
-          <Route path="/admin" element={<Loginpage/>}></Route>
+          <Route path="/login" element={<Login/>}></Route>
+          <Route path="/admin" element={<Admin/>}></Route>
       </Routes>
       <Footer/>
     </BrowserRouter>

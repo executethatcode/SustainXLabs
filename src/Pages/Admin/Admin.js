@@ -1,67 +1,96 @@
 import React from 'react'
-import "../../Pages/Admin/Admin.css"
+import { Container, Row, Col, Table, Button } from 'react-bootstrap';
+import logo from '../../assets/img/logo.png';
 
 const Admin = () => {
+
+  const requests = [
+    {
+      id: 1,
+      name: 'John Doe',
+      email: 'john@example.com',
+      garbageType: 'Plastic',
+      garbageDescription: 'Plastic bottles',
+      address: '123 Street, City',
+      pincode: '123456',
+      state: 'StateName',
+      status: 'Pending'
+    },
+    {
+      id: 2,
+      name: 'Jane Smith',
+      email: 'jane@example.com',
+      garbageType: 'Organic',
+      garbageDescription: 'Kitchen waste',
+      address: '456 Avenue, City',
+      pincode: '654321',
+      state: 'StateName',
+      status: 'Completed'
+    },
+    // Add more data as needed
+  ];
+
+
+  const handleLogout = () => {
+    // Add your logout logic here
+    console.log('Logout');
+  };
+
   return (
     <>
-    <Navbar bg="dark" variant="dark" expand="lg">
-        <Navbar.Brand href="#home">Admin Dashboard</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-
-      <Container fluid>
-        <Row>
-          <Col md={2} className="sidebar bg-light p-3">
-            <Nav defaultActiveKey="/home" className="flex-column">
-              <Nav.Link href="#dashboard">Dashboard</Nav.Link>
-              <Nav.Link href="#users">Users</Nav.Link>
-              <Nav.Link href="#settings">Settings</Nav.Link>
-            </Nav>
-          </Col>
-          <Col md={10} className="main-content p-4">
-            <h1>Welcome to the Admin Dashboard</h1>
-            <Row>
-              <Col md={4}>
-                <Card>
-                  <Card.Body>
-                    <Card.Title>Card Title 1</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and make up the bulk of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={4}>
-                <Card>
-                  <Card.Body>
-                    <Card.Title>Card Title 2</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and make up the bulk of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={4}>
-                <Card>
-                  <Card.Body>
-                    <Card.Title>Card Title 3</Card.Title>
-                    <Card.Text>
-                      Some quick example text to build on the card title and make up the bulk of the card's content.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
+     <header>
+        <Container>
+          <Row className="align-items-center my-3">
+            <Col xs="auto">
+              <img src={logo} alt="Logo" className="img-fluid" style={{ height: '50px' }} />
+            </Col>
+            <Col>
+              <h1 className="mb-0">Admin Panel</h1>
+            </Col>
+            <Col xs="auto" className="text-end">
+              <Button variant="outline-danger" onClick={handleLogout}>Logout</Button>
+            </Col>
+          </Row>
+        </Container>
+      </header>
+      <Container>
+        <Table striped bordered hover responsive className="mt-4">
+          <thead>
+            <tr>
+              <th>Request ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Garbage Type</th>
+              <th>Garbage Description</th>
+              <th>Address</th>
+              <th>Pincode</th>
+              <th>State</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {requests.map(request => (
+              <tr key={request.id}>
+                <td className="p-2">{request.id}</td>
+                <td className="p-2">{request.name}</td>
+                <td className="p-2">{request.email}</td>
+                <td className="p-2">{request.garbageType}</td>
+                <td className="p-2">{request.garbageDescription}</td>
+                <td className="p-2">{request.address}</td>
+                <td className="p-2">{request.pincode}</td>
+                <td className="p-2">{request.state}</td>
+                <td className="p-2">{request.status}</td>
+                <td className="p-2">
+                  <Button variant="warning" size="sm" className="me-2">Edit</Button>
+                  <Button variant="danger" size="sm">Delete</Button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
       </Container>
-      </>
+    </>
   )
 }
 

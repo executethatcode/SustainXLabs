@@ -24,6 +24,7 @@ const NavbarContainer = () => {
                         <Nav.Link href="/contact">Contact</Nav.Link>
                     </Nav>
                     <Nav className="ms-auto">
+                        
                         <Button variant="outline-light" >Admin</Button>
                     </Nav>
                 </Navbar.Collapse>
