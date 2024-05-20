@@ -30,7 +30,7 @@ const Footer = () => {
             </ul>
           </Col>
         </Row>
-        <Row className="mt-3">
+        <Row className="mt-auto">
           <Col className="text-center">
             <p className="mb-0">&copy; 2024 SustainXlabs. All rights reserved. Designed by Team 5</p>
           </Col>

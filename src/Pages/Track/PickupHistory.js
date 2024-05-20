@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Container, Form, Modal } from 'react-bootstrap';
 import axios from 'axios';
 
@@ -10,10 +10,11 @@ const PickupHistory = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.get(`http://127.0.0.1:6500/addpickup/${requestId}`); 
+      const response = await axios.get(`http://127.0.0.1:6500/addpickup/${requestId}`);
       setPickupData(response.data);
-      console.log(response.data);
+      console.log(pickupData);
       setShowModal(true);
+      
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -23,8 +24,8 @@ const PickupHistory = () => {
 
   return (
     <>
-      <Container className="d-flex flex-column align-items-center mt-5">
-        <Form onSubmit={handleSubmit}>
+      <Container className="d-flex flex-column align-items-center mt-5 ">
+        <Form onSubmit={handleSubmit} className='main'>
           <Form.Group controlId="formBasicInput">
             <Form.Control
               type="text"
@@ -39,21 +40,23 @@ const PickupHistory = () => {
         </Form>
       </Container>
 
-      <Modal show={showModal} onHide={handleClose}>
+      <Modal show={showModal} onHide={handleClose} >
         <Modal.Header closeButton>
           <Modal.Title>Pickup Details</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        
           {pickupData ? (
+            <Modal.Body>
             <div>
               <p><strong>ID:</strong> {pickupData[0].req_id}</p>
               <p><strong>Name:</strong> {pickupData[0].name}</p>
               <p><strong>Status:</strong> {pickupData[0].status}</p>
             </div>
+            </Modal.Body>
           ) : (
-            <p>No data found for this Request ID.</p>
+            <p>Loading...</p>
           )}
-        </Modal.Body>
+        
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close

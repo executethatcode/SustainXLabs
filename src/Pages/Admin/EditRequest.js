@@ -27,7 +27,7 @@ const EditRequest = () => {
         const response = await updateRequest(fetchedData)
         if(response.status ===200){
             
-            <Alert>Update succes</Alert>
+            navigate('/admin');
         }
         else{
             //error
@@ -87,15 +87,15 @@ const EditRequest = () => {
 
                         <Form.Group controlId="formPickupDate">
                             <Form.Label>Pickup Date</Form.Label>
-                            <Form.Control type='date' name='pDate' value={fetchedData.request_date} onChange={handleFieldChange}/>
+                            <Form.Control type='date' name='pDate' value={fetchedData.request_date} readOnly onChange={handleFieldChange} style={{borderBlockColor: "red"}}/>
                         </Form.Group>
 
                         <Form.Group controlId="formStatus">
                             <Form.Label>Status</Form.Label>
                             <Form.Control as="select" name='status' value={fetchedData.status} readOnly style={{borderBlockColor: "green"}} onChange={handleFieldChange}>
-                                <option value="Pending">Pending</option>
-                                <option value="In Process">In Process</option>
-                                <option value="Completed">Completed</option>
+                                <option value="pending">pending</option>
+                                <option value="inprocess">inprocess</option>
+                                <option value="completed">completed</option>
                             </Form.Control>
                         </Form.Group>
 

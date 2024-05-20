@@ -12,8 +12,7 @@ const Section1 = () => {
                 </Col>
                 <Col md={6} className="right-half d-flex flex-column justify-content-center align-items-start">
                     <h1>The Future of Waste Management</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur. Lectus est senectus lacus vulputate erat tempus aenean adipiscing. Eu massa maecenas lorem massa quis fusce.<br/><br/>Eget risus vitae pretium ut egestas lorem in. Vitae placerat elementum arcu nisi aliquet faucibus.
-                        Sed sapien neque lectus quis sit odio. Pulvinar donec a id a. Libero purus proin ut egestas quis posuere. Mauris at amet pellentesque tempor rhoncus. Proin odio sed scelerisque suspendisse sagittis</p>
+                    <p>Welcome to the forefront of waste management innovation, where sustainability meets cutting-edge technology. As we move towards a greener future, our approach to managing waste is evolving rapidly. Here's a glimpse into how we're transforming waste management to create a cleaner, more sustainable world for generations to come.</p>
                 </Col>
             </Row>
         </Container>

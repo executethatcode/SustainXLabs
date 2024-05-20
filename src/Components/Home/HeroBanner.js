@@ -1,8 +1,10 @@
 import React from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import "../../Components/Home/HeroBanner.css"
+import { useNavigate } from 'react-router';
 
 const HeroBanner = () => {
+    const navigate = useNavigate();
     return (
         <div className="hero-banner-home">
             <div className="overlay">
@@ -19,8 +21,8 @@ const HeroBanner = () => {
                         </Col>
                     </Row>
                         <Col md={3}>
-                        <Button variant="outline-light" className="hero-button-home">Add Pickup</Button>
-                            <Button variant="outline-light" className="hero-button-home">Contact us</Button>
+                        <Button variant="outline-light" className="hero-button-home" onClick={()=>{navigate('/addpickup')}}>Add Pickup</Button>
+                            <Button variant="outline-light" className="hero-button-home" onClick={()=>{navigate('/contact')}}>Contact us</Button>
                         </Col>
                     <Row>
 
