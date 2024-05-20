@@ -8,7 +8,7 @@ const Section1 = () => {
         <Container fluid className="vh-100">
             <Row className="h-100">
                 <Col md={6} className="left-half">
-                    {/* Image will be set as background via CSS */}
+                    
                 </Col>
                 <Col md={6} className="right-half d-flex flex-column justify-content-center align-items-start">
                     <h1>The Future of Waste Management</h1>

@@ -7,7 +7,7 @@ const Section4 = () => {
     <Container fluid className="main-container-section4 d-flex flex-column justify-content-center align-items-center">
       <h1>Create Real Transformation with a SustainXlabs</h1>
       <p>Waste management doesn’t have to be a burden to your business.</p>
-      <Button variant="primary" className="mt-3" >Add Pickup</Button>
+      <Button variant="light"  >Add Pickup</Button>
     </Container>
   )
 }

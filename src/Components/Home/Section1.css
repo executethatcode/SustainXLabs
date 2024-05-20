@@ -1,13 +1,23 @@
 .left-half {
-    background: red;
+    background: url('/src/assets/img/Home-Section-1.png');
     background-size: cover;
     background-position: center;
   }
   
   .right-half {
     padding: 20px;
+    background-color: black;
+    color: white;
   }
   
   .vh-100 {
     height: 100vh;
+  }
+  h1{
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+  }
+  p{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
   }

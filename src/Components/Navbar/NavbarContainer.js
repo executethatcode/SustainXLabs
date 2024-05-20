@@ -1,9 +1,12 @@
 import React from 'react'
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import logo from '../../assets/img/logo.png';
+import { useNavigate } from 'react-router';
+
 
 
 const NavbarContainer = () => {
+    const navigate = useNavigate();
     return (
         <Navbar bg="dark" data-bs-theme="dark" expand="lg" className="bg-body-tertiary">
             <Container>
@@ -25,7 +28,9 @@ const NavbarContainer = () => {
                     </Nav>
                     <Nav className="ms-auto">
                         
-                        <Button variant="outline-light" >Admin</Button>
+                        <Button variant="outline-light" onClick={()=>{
+                            navigate("/login");
+                        }} >Admin</Button>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

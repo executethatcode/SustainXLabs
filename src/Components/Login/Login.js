@@ -16,21 +16,24 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-   try {
+    try {
       const response = await adminlogin(credentials);
       console.log(response);
-      if(response.status === 200){
+      if (response && response.status === 200) {
         storeToken(response.data.token);
-        navigate("/admin");
+        navigate('/admin');
+      } else {
+        setLoginError('Unexpected error occurred. Please try again.');
       }
     } catch (error) {
       console.log(error.response);
-      if(error.response.status === 400){
+      if (error.response && error.response.status === 400) {
         setLoginError(error.response.data.message);
+      } else {
+        setLoginError('Login failed. Please check your credentials and try again.');
       }
     }
-
-  }
+  };
 
   return (
     <Container className="mt-5 mb-5">
@@ -43,7 +46,7 @@ const Login = () => {
                 <Form.Label>Email</Form.Label>
                 <Form.Control
                   type="email"
-                  placeholder="Enter email"
+                  placeholder="Enter Email"
                   name="email"
                   onChange={handleFieldChange}
                   required
@@ -54,7 +57,7 @@ const Login = () => {
                 <Form.Label>Password</Form.Label>
                 <Form.Control
                   type="password"
-                  placeholder="Password"
+                  placeholder="Enter Password"
                   name="password"
                   onChange={handleFieldChange}
                   required

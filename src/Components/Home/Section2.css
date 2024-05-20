@@ -1,15 +1,25 @@
 .custom-container {
-    height: 340px;
+  background: #1A4B7E;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  
   .icon {
     width: 32px;
     height: 32px;
   }
   
   .ms-3 {
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
     margin-left: 1rem; /* Bootstrap class for margin-left */
+  }
+  h4{
+    
+    
+  }
+  p{
+    font-family: 'Open Sans', sans-serif;
+
   }

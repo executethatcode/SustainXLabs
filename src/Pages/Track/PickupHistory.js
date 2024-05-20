@@ -9,11 +9,10 @@ const PickupHistory = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
-    // Fetch data based on the requestId using Axios
     try {
-      const response = await axios.get(`http://127.0.0.1:6500/addpickup/${requestId}`); // Replace with your API endpoint
+      const response = await axios.get(`http://127.0.0.1:6500/addpickup/${requestId}`); 
       setPickupData(response.data);
+      console.log(response.data);
       setShowModal(true);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -47,10 +46,9 @@ const PickupHistory = () => {
         <Modal.Body>
           {pickupData ? (
             <div>
-              <p><strong>ID:</strong> {pickupData.id}</p>
-              <p><strong>Date:</strong> {pickupData.date}</p>
-              <p><strong>Status:</strong> {pickupData.status}</p>
-              {/* Add more fields as necessary */}
+              <p><strong>ID:</strong> {pickupData[0].req_id}</p>
+              <p><strong>Name:</strong> {pickupData[0].name}</p>
+              <p><strong>Status:</strong> {pickupData[0].status}</p>
             </div>
           ) : (
             <p>No data found for this Request ID.</p>

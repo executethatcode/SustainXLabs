@@ -10,7 +10,7 @@ const Section1 = () => {
           <Card className="h-100">
             <Card.Body>
               <Card.Title>Main Office</Card.Title>
-              <Card.Text>
+              <Card.Text style={{color: 'Black'}}>
               Raintree Marg, near Bharati Vidyapeeth, <br/>Sector 7, CBD Belapur, Navi Mumbai, Maharashtra 400614
               </Card.Text>
               <div className="map-container">
@@ -30,7 +30,10 @@ const Section1 = () => {
         </Col>
         <Col md={6} className="right-div">
           <h1>Get in Touch</h1>
-          <p>If you have any questions, please feel free to contact us</p>
+          <p>If you have any questions, please feel free to contact us<br/>
+          +91 8267811810<br/>
+          prashant@sustainxlabs.com
+          </p>
           
         </Col>
       </Row>

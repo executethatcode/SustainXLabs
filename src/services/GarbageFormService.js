@@ -10,3 +10,4 @@ export function saveGarbageFormData(garbageFormData){
 export function fetchGarbageFormDataById(){
     return axios.get(SAVE_FORMDATA_API_ROUTE);
 }
+
