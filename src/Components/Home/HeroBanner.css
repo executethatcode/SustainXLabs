@@ -1,6 +1,9 @@
-.hero-banner {
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+.hero-banner-home {
     position: relative;
-    background: url('https://via.placeholder.com/1200x600') no-repeat center center;
+    background: url('/src/assets/img/HomeBanner.png') no-repeat center center;
     background-size: cover;
     height: 600px;
     color: #fff;
@@ -20,18 +23,22 @@
     justify-content: center;
 }
 
-.hero-title {
+.hero-title-home {
+    font-family: 'Fira Sans', sans-serif;
     font-size: 3rem;
     margin-bottom: 20px;
 }
 
-.hero-subtitle {
+.hero-subtitle-home {
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
     margin-bottom: 30px;
 }
 
-.hero-button {
+.hero-button-home {
+    
     font-size: 1.2rem;
     margin-right: 10px;
+    margin-left: 10px;
     margin-bottom: 10px;
 }

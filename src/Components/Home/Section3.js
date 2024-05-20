@@ -5,7 +5,7 @@ import "../../Components/Home/Section3.css"
 const Section3 = () => {
   return (
     <Container fluid className="main-container">
-      <Row className="mb-4">
+      <Row >
         <Col>
           <Container className="content-container">
             <h1>What’s Your Waste Problem?</h1>

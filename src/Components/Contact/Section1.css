@@ -1,22 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 .main-container {
     width: 844px;
     margin: 0 auto; 
-    padding: 20px;
-    background-color: #f8f9fa; 
+    padding: 20px; 
   }
   
   .left-div, .right-div {
     padding: 20px;
   }
+
+  .right-div{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    h1{
+      font-family: 'Fira Sans', sans-serif;
+    }
+    p{
+      font-family: 'Open Sans', sans-serif;
+      color: black;
+    }
+  }
   
-  .image-container {
+  .map-container {
+    margin-top: 80px;
     height: 200px;
-    background-color: #e9ecef; 
+    background-color: transparent; 
     display: flex;
     align-items: center;
     justify-content: center;
     color: #6c757d;
-    border: 1px solid #dee2e6;
+    border: 0cap solid #dee2e6;
   }
   
   h1 {
