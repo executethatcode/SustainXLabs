@@ -42,9 +42,9 @@ const PickupHistory = () => {
         </Form>
       </Container>
 
-      <Modal show={showModal} onHide={handleClose}  >
+      <Modal show={showModal} onHide={handleClose} data-bs-theme="dark" >
         <Modal.Header closeButton>
-          <Modal.Title>Pickup Details</Modal.Title>
+          <Modal.Title style={{color:"white"}}>Pickup Details</Modal.Title>
         </Modal.Header>
           {pickupData ? (
             <Modal.Body >
