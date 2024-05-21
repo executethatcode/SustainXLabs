@@ -11,7 +11,7 @@ const Admin = () => {
   const [garbageFormData, setGarbageFormData] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedRequest, setSelectedRequest] = useState(0);
-  const navigate = useNavigate();
+  const navigate = useNavigate();        
 
   const closeModal = () => {
     setShowModal(false);
