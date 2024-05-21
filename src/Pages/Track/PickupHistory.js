@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Container, Form, Modal } from 'react-bootstrap';
 import axios from 'axios';
 
@@ -6,6 +6,8 @@ const PickupHistory = () => {
   const [requestId, setRequestId] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [pickupData, setPickupData] = useState(null);
+
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -40,13 +42,12 @@ const PickupHistory = () => {
         </Form>
       </Container>
 
-      <Modal show={showModal} onHide={handleClose} >
+      <Modal show={showModal} onHide={handleClose}  >
         <Modal.Header closeButton>
           <Modal.Title>Pickup Details</Modal.Title>
         </Modal.Header>
-        
           {pickupData ? (
-            <Modal.Body>
+            <Modal.Body >
             <div>
               <p><strong>ID:</strong> {pickupData[0].req_id}</p>
               <p><strong>Name:</strong> {pickupData[0].name}</p>

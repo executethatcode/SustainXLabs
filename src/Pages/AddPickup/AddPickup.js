@@ -73,7 +73,7 @@ const AddPickup = () => {
             <Form.Control type="date" name='pDate' onChange={handleFieldChange} />
           </Form.Group>
 
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" >
             Submit Details
           </Button>
         </Form>
